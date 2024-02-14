@@ -117,5 +117,65 @@ function multiplos(){
 //9. Implemente uma função que imprima a soma dos primeiros 100 números inteiros
 
 function soma(){
-    
+    var ite = 0
+    var result = 0
+    while (ite < 100){
+        ite += 1
+        result += ite
+    }
+    console.log(result)
 }
+
+//soma()
+
+//10. Implemente uma função que calcule e devolva o fatorial de um número.
+
+function factorial(number){
+    var result = number
+    while (number > 1){
+        result = result * (number - 1)
+        number += -1
+    }
+    return result
+}
+
+//console.log(factorial(7))
+
+//11.Implemente várias funções para calcular o máximo, o mínimo e a média de uma sequência de números
+//positivos.
+
+var sequencia = [5,2,3,93,3,4]
+
+function maximo(sequencia){
+    var maximo = sequencia[0]
+    for (var i = 1; i < sequencia.length; i ++){
+        if (sequencia[i] > maximo){
+            maximo = sequencia[i];
+        }
+    }
+    console.log(maximo)
+}
+
+//maximo(sequencia)
+
+function minimo(sequencia){
+    var minimo = sequencia[0]
+    for (var i = 1; i < sequencia.length; i ++){
+        if (sequencia[i] < minimo){
+            minimo = sequencia[i];
+        }
+    }
+    console.log(minimo)
+}
+
+//minimo(sequencia)
+
+function media(sequencia){
+    var soma = 0
+    for (var i = 0; i < sequencia.length; i++){
+        soma += sequencia[i]
+    }
+    console.log(soma/ sequencia.length)
+}
+
+//media(sequencia)
