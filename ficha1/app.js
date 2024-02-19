@@ -97,6 +97,7 @@ function operations(num1, num2, operador) {
 
     }
 }
+// para faze-lo pode ser tambem com o "math." para o ^ é math.pow(num1, num2)
 //operations(33, 21, "+")
 
 //8. Implemente uma função que imprima todos os múltiplos de 5 menores que 20.
@@ -140,6 +141,19 @@ function factorial(number){
 }
 
 //console.log(factorial(7))
+
+//resolução do professor do 10
+function fact(n){
+    var f =1;
+    for (var i = n; i>1; i--){
+        f *= i;
+
+    }
+    return f
+    
+}
+
+//fact(7)
 
 //11.Implemente várias funções para calcular o máximo, o mínimo e a média de uma sequência de números
 //positivos.
