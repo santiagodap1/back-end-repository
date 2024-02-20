@@ -21,7 +21,7 @@ function condicaoFisica(peso, altura){
     }
 }
 
-//condicaoFisica(60, 1.70)
+// condicaoFisica(60, 1.70)
 
 //2. Escreva uma função que dada uma frase imprima a mesma frase por ordem inversa.
 //a. Por exemplo: Entrada: Hoje e Domingo Saída: ejoH e ognimoD
@@ -105,7 +105,7 @@ function horasLaborais(entrada, saida){
     
 }
 
-// horasLaborais()
+// horasLaborais("09:20:00", "17:50:00")
 
 // 6. Escreva uma função que desenhe um retângulo com asteriscos. A altura e largura devem ser passadas como
 // argumentos
@@ -167,29 +167,71 @@ function processamento_notas(turma){
     for (let aluno = 0; aluno < turma.length; aluno++){
         console.log(turma[aluno].nota)
     }
-    let melhor_nota = {"n_aluno":"0","nota":0}
+    var melhor_nota = {"n_aluno":"0","nota":0}
     for (let aluno = 0; aluno < turma.length; aluno++){
         if (turma[aluno].nota >= melhor_nota.nota){
             melhor_nota = turma[aluno]
         }
     }
-    console.log("A melhhor nota é do aluno"+ turma[melhor_nota].n_aluno + "com a nota" + turma[melhor_nota].nota)
+    console.log("A melhhor nota é do aluno "+ melhor_nota.n_aluno + " com a nota " + melhor_nota.nota)
+
+    var pior_nota = {"n_aluno":"0","nota":21}
+    for (let aluno = 0; aluno < turma.length; aluno++){
+        if (turma[aluno].nota <= pior_nota.nota){
+            pior_nota = turma[aluno]
+        }
+    }
+    console.log("A pior nota é do aluno "+ pior_nota.n_aluno + " com a nota " + pior_nota.nota)
+
+    var media = 0
+    var soma = 0
+    var aluno_media = turma[0]
+    for (let aluno = 0; aluno < turma.length; aluno++){
+        soma += turma[aluno].nota
+    }
+    media = soma  / turma.length
+    var menor_diferenca = 21
+    var diferenca = 0
+    for (let aluno = 0; aluno < turma.length; aluno++){
+        diferenca = Math.abs(turma[aluno].nota - media)
+        if (diferenca < menor_diferenca){
+            menor_diferenca = diferenca
+            aluno_media = turma[aluno]
+        }
+        
+    }
+    console.log("o aluno com a nota mais proxina a media é "+ aluno_media.n_aluno + " com a nota " + aluno_media.nota)
+
+    var numero_de_negativas = 0
+    var numero_de_positivas = 0
+    for (let aluno = 0; aluno < turma.length; aluno++){
+        if (turma[aluno].nota < 10){
+            numero_de_negativas++
+        } 
+        else{
+            numero_de_positivas++
+        }
+    }
+    console.log("há " + numero_de_negativas + " notas negativas")
+    console.log("há " + numero_de_positivas + " notas positivas")
+    
+    
 }
 
-processamento_notas([{
-    "n_aluno":"2020",
-    "nota":8
-},{
-    "n_aluno":"2021",
-    "nota":20
-},{
-    "n_aluno":"2022",
-    "nota":17
-},{
-    "n_aluno":"2023",
-    "nota":1
-},{
-    "n_aluno":"2025",
-    "nota":19
-},
-])
+// processamento_notas([{
+//     "n_aluno":"2020",
+//     "nota":18
+// },{
+//     "n_aluno":"2021",
+//     "nota":3
+// },{
+//     "n_aluno":"2022",
+//     "nota":1
+// },{
+//     "n_aluno":"2023",
+//     "nota":13
+// },{
+//     "n_aluno":"2025",
+//     "nota":19
+// },
+// ])
