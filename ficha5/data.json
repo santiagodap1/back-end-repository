@@ -1,0 +1,8 @@
+{
+    "data":[
+    {"firstName": "santiago", "lastName": "pinto", "profession": "student", "age": 18, "id": 1},
+    {"firstName": "pedro", "lastName": "matos", "profession": "worker", "age": 32, "id": 2},
+    {"firstName": "john", "lastName": "abreu", "profession": "student", "age": 43, "id": 3},
+    {"firstName": "jesus", "lastName": "pereira", "profession": "student", "age": 99, "id": 4}
+]
+}
